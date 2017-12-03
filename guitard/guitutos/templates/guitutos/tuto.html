@@ -1,0 +1,9 @@
+<h1> {{ tutoriel.nom }} </h1>
+<p> Par {{ tutoriel.createur.nom }} </p>
+<a href="{{ tutoriel.video }}"> Visionner </a>
+<ul>
+{% for commentaire in liste_commentaires %}
+    <li> <b> {{ commentaire.auteur.nom }} : </b>
+      <p> {{ commentaire.texte }} </p> </li>
+{% endfor %}
+</ul>    
