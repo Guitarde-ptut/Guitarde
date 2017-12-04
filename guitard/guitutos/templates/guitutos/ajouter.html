@@ -1,0 +1,23 @@
+<DOCTYPE html>
+<html>
+{% include "guitutos/head.html" %}
+
+<body>
+{% include "guitutos/header.html" %}
+
+<section id="bod">
+<br/>
+<form method="post" action="#">
+  {% csrf_token %}
+  Nom
+  <input type="text" name="nom"/>
+  URL youtube de la vidéo
+  <input type="url" name="video"/>
+  Description
+  <textarea rows="4" cols="50" name="description"></textarea>
+  <button type="submit">Envoyer</button>
+</form>
+</ul>
+</section>
+</body>
+</html>

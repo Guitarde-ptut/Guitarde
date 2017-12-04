@@ -68,4 +68,21 @@ def deconnexion(request):
     logout(request)
     return redirect('index')
 
+def ajouter (request):
+    template = loader.get_template("guitutos/ajouter.html")
+    nom = request.POST.get("nom")
+    description = request.POST.get("description")
+    video = request.POST.get("video")
+    if request.method == 'POST' \
+       and len(video)>0 \
+       and len(nom)>0 \
+       and User.objects.filter(username=request.user).exists():          
+        Tutoriel.objects.create(createur=request.user,
+                                description=description,
+                                video=video,
+                                nom=nom)
+        return redirect('liste_tutos')
+    return HttpResponse(template.render(None, request))
+
+
 # Create your views here.
