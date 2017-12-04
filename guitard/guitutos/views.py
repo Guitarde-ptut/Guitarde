@@ -28,6 +28,11 @@ def tuto(request, id_tuto):
         'liste_commentaires': liste_commentaires,
         'tutoriel': tutoriel,
     }
+    if request.method == 'POST':
+        commentaire = request.POST.get("commentaire")
+        Commentaire.objects.create(auteur=request.user,
+                                   com_tuto=tutoriel,
+                                   texte=commentaire)
     return HttpResponse(template.render(context, request))
 
 def inscription(request):

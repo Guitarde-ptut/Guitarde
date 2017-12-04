@@ -11,6 +11,11 @@
 <iframe width="560" height="315" src="{{ tutoriel.toEmbarque }}" frameborder="0" allowfullscreen></iframe>
 <br/>
 <p> Tuto par {{ tutoriel.createur.username }} </p>
+<form method="post" action="#">
+  {% csrf_token %}
+  <textarea rows="4" cols="50" name="commentaire"> </textarea>
+  <button type="submit">Envoyer</button>
+</form>
 <ul>
 {% for commentaire in liste_commentaires %}
     <li> <b> {{ commentaire.auteur.username }} : </b>
