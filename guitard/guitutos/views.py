@@ -6,13 +6,16 @@ from django.shortcuts import get_object_or_404, render
 from .models import Tutoriel
 from .models import Commentaire
 
-def index(request):
+def liste_tutos(request):
     liste_tutos = Tutoriel.objects.all()[:5]
-    template = loader.get_template('guitutos/index.html')
+    template = loader.get_template('guitutos/liste_tutos.html')
     context = {
         'liste_tutos': liste_tutos,
         }
     return HttpResponse(template.render(context, request))
+
+def index(request):
+    return render_to_response(template.render("guitutos/index.html", request))
 
 def tuto(request, id_tuto):
     tutoriel = get_object_or_404(Tutoriel, pk=id_tuto)

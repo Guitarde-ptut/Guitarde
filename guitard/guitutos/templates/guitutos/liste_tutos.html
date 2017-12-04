@@ -2,7 +2,7 @@
     <ul>
       {% for video in liste_tutos %}
         <li><a href="/tutos/t/{{video.id}}/">
-	  {{ video.nom }} par {{ video.createur.nom }} </a></li>
+	  {{ video.nom }} par {{ video.createur.username }} </a></li>
       {% endfor %}
     </ul>
 {% else %}
