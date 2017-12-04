@@ -1,19 +1,10 @@
 <DOCTYPE html>
 <html>
-
-<head>
-	<title>Guitarde</title>
-	<meta charset="utf-8">
-	<meta name="description" content="On apprend la guitare en s'amusant !">
-</head>
+{% include "guitutos/head.html" %}
 <body>
-	<header>
-		<img src="IMAGE A INSERER" alt="Logo Guitarde"/>
-		<h1> GUITARDE </h1>
-		<p>Joue plus malin avec tes mains !</p>
-	</header>
-	<div>
-	  <a href="/tutos/tutos">Liste des tutoriels</a>
-	</div>
+{% include "guitutos/header.html" %}
+<div>
+  <a href="/tutos/tutos">Liste des tutoriels</a>
+</div>
 </body>
 </html>

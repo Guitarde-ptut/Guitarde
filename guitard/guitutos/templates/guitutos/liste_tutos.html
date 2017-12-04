@@ -1,3 +1,9 @@
+<DOCTYPE html>
+<html>
+{% include "guitutos/head.html" %}
+<body>
+{% include "guitutos/header.html" %}
+
 {% if liste_tutos %}
     <ul>
       {% for video in liste_tutos %}
@@ -8,3 +14,5 @@
 {% else %}
     <p> Aucune vidéo... </p>
 {% endif %}
+</body>
+</html>
