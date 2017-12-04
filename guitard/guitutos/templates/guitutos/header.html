@@ -1,5 +1,7 @@
+{% load static %}
+
 <header>
-  <img src="IMAGE A INSERER" alt="Logo Guitarde"/>
+  <img src="{% static "guitutos/img/logo.png" %}" alt="Logo Guitarde"/>
   {% if request.user.username %}
   <span>Connecté en tant que {{ request.user.username }}</span>
   <a href="/tutos/deconnexion">Déconnexion</a>
