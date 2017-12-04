@@ -1,0 +1,19 @@
+<DOCTYPE html>
+<html>
+{% include "guitutos/head.html" %}
+
+<body>
+{% include "guitutos/header.html" %}
+
+<section id="bod">
+{% block content %}
+  <h2>Inscription</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Inscription</button>
+  </form>
+  {% endblock %}
+</section>
+</body>
+<html>

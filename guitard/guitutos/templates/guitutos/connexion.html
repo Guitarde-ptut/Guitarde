@@ -1,0 +1,20 @@
+<DOCTYPE html>
+<html>
+{% include "guitutos/head.html" %}
+
+<body>
+{% include "guitutos/header.html" %}
+
+<section id="bod">
+
+<h2>Connexion</h2>
+  <form method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Utilisateur">
+<input type="password" name="password" placeholder="Mot de passe">
+    {{ form.as_p }}
+    <button type="submit">Connexion</button>
+  </form>
+</section>
+</body>
+<html>

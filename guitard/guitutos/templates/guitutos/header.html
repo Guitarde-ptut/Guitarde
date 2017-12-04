@@ -1,5 +1,12 @@
 <header>
-		<img src="IMAGE A INSERER" alt="Logo Guitarde"/>
-		<h1> GUITARDE </h1>
-		<p>Joue plus malin avec tes mains !</p>
+  <img src="IMAGE A INSERER" alt="Logo Guitarde"/>
+  {% if request.user.username %}
+  <span>Connecté en tant que {{ request.user.username }}</span>
+  <a href="/tutos/deconnexion">Déconnexion</a>
+  {% else %}
+  <a href="/tutos/inscription">Inscription</a>
+  <a href="/tutos/connexion">Connexion</a>
+  {% endif %}
+  <h1> GUITARDE </h1>
+  <p>Joue plus malin avec tes mains !</p>
 </header>
