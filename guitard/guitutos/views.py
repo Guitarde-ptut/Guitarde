@@ -11,7 +11,7 @@ from .models import Tutoriel
 from .models import Commentaire
 
 def liste_tutos(request):
-    liste_tutos = Tutoriel.objects.all()[:5]
+    liste_tutos = Tutoriel.objects.all()
     template = loader.get_template('guitutos/liste_tutos.html')
     context = {
         'liste_tutos': liste_tutos,
@@ -61,6 +61,7 @@ def connexion(request):
     user = authenticate(request, username=username, password=password)
     if user is not None:
         login(request, user)
+        return redirect('index')
     return HttpResponse(template.render(None, request))
     
 
