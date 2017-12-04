@@ -4,6 +4,7 @@
 <body>
 {% include "guitutos/header.html" %}
 
+<section id="bod">
 <h1> {{ tutoriel.nom }} </h1>
 <p> Par {{ tutoriel.createur.username }} </p>
 <a href="{{ tutoriel.video }}"> Visionner </a>
@@ -12,6 +13,7 @@
     <li> <b> {{ commentaire.auteur.username }} : </b>
       <p> {{ commentaire.texte }} </p> </li>
 {% endfor %}
-</ul>    
-
+</ul>
+</section>
+</body>
 </html>

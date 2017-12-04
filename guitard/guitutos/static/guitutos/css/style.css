@@ -1,0 +1,150 @@
+body {
+    text-align : center;
+    background-color : Gainsboro;
+    font-family : sans-serif;
+    position : relative;
+    background-image : url("../img/cloudy-day.png");
+    background-repeat : repeat;
+}
+
+article {
+    background-color : white;
+    margin-left : 20px;
+    margin-bottom : 10px;
+    margin-right : 20px;
+    margin-top : 10px;
+}
+header p {
+    background-color : rgba(255,255,255,0.6);
+    font-weight : bold;
+    padding : 14px;
+    border-style : solid;
+    border-radius :10px;
+    border-color : #005858;
+    border-color : black;
+    border-width : 1px;
+    font-size : 20px;
+}
+a {
+    color : DarkSlateGray ;
+    text-decoration: none;
+}
+
+header {
+    
+    margin-top : 0px;
+    margin-bottom : 6px;
+    padding-top : 5px;
+    padding-bottom : 5px;
+    min-height : 70px;
+}
+header, footer {
+    border-width : 0px;
+    border : none;
+    border-left : none;
+    border-right : none;
+    border-top : none;
+    border-bottom : none;
+    padding-bottom :10px;
+    padding-top : 10px;
+    margin-left : 0%;
+    margin-right : 0%;
+    width : 100%;
+}
+
+footer {
+    bottom : 0;
+    min-height : 35px;
+    margin-top : 60px;
+    margin-bottom : 10px;
+    text-align : center;
+}
+.menu {
+    margin : auto;
+    border-spacing : 10px;
+    border : 0;
+}
+
+h1 {
+    color : DarkSlateGray;
+}
+
+h2 {
+
+}
+
+header table a {
+    color : black;
+    text-decoration : none;
+}
+
+
+#bod {
+    text-align : center;
+    color : DarkSlateGray;
+    border-width : 10px;
+    border-radius : 18px;
+    background-color : WhiteSmoke;
+    border-color : DarkCyan;
+    width : 75%;
+    max-width : 1000px;
+    margin-left : auto;
+    margin-right : auto;
+    position : center;
+    min-height : 800px;
+    border : solid;
+    padding : 15px;
+    display : block;
+    vertical-align : middle;
+}
+
+img {
+    display : block;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+input, textarea {
+  width:100%
+}
+
+p {
+    display : inline-block;
+    vertical-align : middle;
+    font-size : 120%;
+}
+
+@keyframes fadein {
+  from {
+    background-color: rgba(0,0,0,0);
+  }
+
+  to {
+    background-color: rgba(230,230,230,0.5)
+  }
+}
+
+@media (max-width : 1200px){ 
+    .fndeco {
+    display : none;
+    }
+    #bod {
+    max-width : 95%;
+    width : 100%;
+    }
+    p {
+    font-size : 150%;
+    }
+    header table a {
+    font-size : 165%;
+    }
+    article {
+    font-size : 150%;
+    }
+    header {
+    display : block;
+    overflow : scroll;
+    }
+}
+
+
