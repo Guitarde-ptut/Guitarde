@@ -15,7 +15,8 @@ def liste_tutos(request):
     return HttpResponse(template.render(context, request))
 
 def index(request):
-    return render_to_response(template.render("guitutos/index.html", request))
+    template = loader.get_template('guitutos/index.html')
+    return HttpResponse(template.render(None, request))
 
 def tuto(request, id_tuto):
     tutoriel = get_object_or_404(Tutoriel, pk=id_tuto)
