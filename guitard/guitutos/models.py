@@ -8,7 +8,9 @@ class Tutoriel(models.Model):
     note = models.IntegerField                            
     description = models.CharField(max_length=500)
     video = models.CharField(max_length=100)
-
+    def toEmbarque (self):
+        return self.video.replace("watch?v=", "embed/")
+        
 class Commentaire(models.Model):
     auteur = models.ForeignKey(User,
                                on_delete=models.CASCADE)
