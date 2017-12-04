@@ -5,6 +5,8 @@ from django.shortcuts import get_object_or_404, render
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
+
 from .models import Tutoriel
 from .models import Commentaire
 
@@ -28,8 +30,10 @@ def tuto(request, id_tuto):
         'liste_commentaires': liste_commentaires,
         'tutoriel': tutoriel,
     }
-    if request.method == 'POST':
-        commentaire = request.POST.get("commentaire")
+    commentaire = request.POST.get("commentaire")
+    if request.method == 'POST' \
+       and len(commentaire)>0 \
+       and User.objects.filter(username=request.user).exists():          
         Commentaire.objects.create(auteur=request.user,
                                    com_tuto=tutoriel,
                                    texte=commentaire)
