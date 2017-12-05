@@ -6,15 +6,19 @@
 {% include "guitutos/header.html" %}
 
 <section id="bod">
-<h1> {{ tutoriel.nom }} </h1>
+  <article><a href="/tutos/tutos"><h2>Aller à la liste des tutoriels</h2></a> </article>
+<article>
+  <h1> {{ tutoriel.nom }} </h1>
 
 <iframe width="560" height="315" src="{{ tutoriel.toEmbarque }}" frameborder="0" allowfullscreen></iframe>
 <br/>
 <p> Tuto par {{ tutoriel.createur.username }} </p>
 <br/>
-<p> {{ tutoriel.description }} </p>
+  <p> {{ tutoriel.description }} </p>
+</article>
 {% if request.user.is_authenticated %}
 <form method="post" action="#">
+  Commenter :
   {% csrf_token %}
   <textarea rows="4" cols="50" name="commentaire"> </textarea>
   <button type="submit">Envoyer</button>

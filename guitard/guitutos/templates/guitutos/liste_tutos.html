@@ -6,8 +6,9 @@
 
 <section id="bod">
   <article>
-    <a href="/tutos/ajouter">Ajouter un tutoriel </a>
+    <a href="/tutos/ajouter"><h2>Ajouter un tutoriel</h2></a>
   </article>
+  <article>
 {% if liste_tutos %}
     <ul>
       {% for video in liste_tutos %}
@@ -17,7 +18,8 @@
     </ul>
 {% else %}
     <p> Aucune vidéo... </p>
-    {% endif %}
+{% endif %}
+</article>
 </section>
 </body>
 </html>

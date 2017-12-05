@@ -2,15 +2,17 @@
 
 <header>
   <img src="{% static "guitutos/img/logo.png" %}" alt="Logo Guitarde"/>
-  {% if request.user.username %}
+  <h1> GUITARDE </h1>
+  <p>
+  {% if request.user.is_authenticated %}
   <span>Connecté en tant que {{ request.user.username }}</span>
   <a href="/tutos/deconnexion">Déconnexion</a>
   {% else %}
   <a href="/tutos/inscription">Inscription</a>
   <a href="/tutos/connexion">Connexion</a>
   {% endif %}
-  <br />
+  <br /> <br /> <br />
   <a href="/tutos/">Accueil</a>
-  <h1> GUITARDE </h1>
+  </p> <br/>
   <p>Joue plus malin avec tes mains !</p>
 </header>

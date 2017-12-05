@@ -13,6 +13,8 @@ article {
     margin-bottom : 10px;
     margin-right : 20px;
     margin-top : 10px;
+    padding-top : 20px;
+    padding-bottom : 20px;
 }
 header p {
     background-color : rgba(255,255,255,0.6);
@@ -112,6 +114,19 @@ p {
     display : inline-block;
     vertical-align : middle;
     font-size : 120%;
+}
+
+li {
+    display : block;
+    text-align : center;
+    font-size : 130%;
+    padding : 12px;
+    width : 60%;
+    margin : auto;
+    margin-top: 14px;
+    margin-bottom : 14px;
+    background-color : WhiteSmoke;
+    list-style-type: none;
 }
 
 @keyframes fadein {
