@@ -6,7 +6,7 @@ class Tutoriel(models.Model):
     createur = models.ForeignKey(User,
                                  on_delete=models.CASCADE)
     note = models.IntegerField                            
-    description = models.CharField(max_length=500)
+    description = models.CharField(max_length=300)
     video = models.CharField(max_length=100)
     def toEmbarque (self):
         return self.video.replace("watch?v=", "embed/")
@@ -16,7 +16,7 @@ class Commentaire(models.Model):
                                on_delete=models.CASCADE)
     com_tuto = models.ForeignKey('Tutoriel',
                              on_delete=models.CASCADE)
-    texte = models.CharField(max_length=300)
+    texte = models.CharField(max_length=60)
 
 class Note(models.Model):
     tuto = models.ForeignKey('Tutoriel',
