@@ -7,6 +7,9 @@
 
 <section id="bod">
 <br/>
+  
+{% if request.user.is_authenticated %}
+
 <form method="post" action="#">
   {% csrf_token %}
   Nom
@@ -17,7 +20,13 @@
   <textarea rows="4" cols="50" name="description"></textarea>
   <button type="submit">Envoyer</button>
 </form>
-</ul>
+
+{% else %}
+
+<i> Connectez vous pour ajouter un tutoriel. </i>
+
+{% endif %}
+
 </section>
 </body>
 </html>

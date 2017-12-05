@@ -3,7 +3,7 @@ body {
     background-color : Gainsboro;
     font-family : sans-serif;
     position : relative;
-    background-image : url("../img/cloudy-day.png");
+    background-image : url("../img/concrete-texture.png");
     background-repeat : repeat;
 }
 
@@ -83,8 +83,8 @@ header table a {
     text-align : center;
     color : DarkSlateGray;
     border-width : 10px;
-    border-radius : 18px;
-    background-color : WhiteSmoke;
+    border-radius : 0px;
+    background-image:  url("../img/cloudy-day.png");
     border-color : DarkCyan;
     width : 75%;
     max-width : 1000px;

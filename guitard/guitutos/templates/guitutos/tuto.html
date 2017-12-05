@@ -13,11 +13,16 @@
 <p> Tuto par {{ tutoriel.createur.username }} </p>
 <br/>
 <p> {{ tutoriel.description }} </p>
+{% if request.user.is_authenticated %}
 <form method="post" action="#">
   {% csrf_token %}
   <textarea rows="4" cols="50" name="commentaire"> </textarea>
   <button type="submit">Envoyer</button>
 </form>
+{% else %}
+<br/>
+<i> Connectez vous pour commenter. </i>
+{% endif %}
 <ul>
 {% for commentaire in liste_commentaires %}
     <li> <b> {{ commentaire.auteur.username }} : </b>
