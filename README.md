@@ -8,6 +8,6 @@ Pour lancer le site et le rendre accessible
 en local au port 8000 (http://localhost:8000 dans
 la barre de recherche), il faut aller dans le dossier
 guitard et exécuter la commande :
-***bash
+***
 python3 manage.py runserver
 ***
