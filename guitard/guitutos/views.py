@@ -61,7 +61,7 @@ def connexion(request):
     user = authenticate(request, username=username, password=password)
     if user is not None:
         login(request, user)
-        return redirect('index')
+        return redirect('liste_tutos')
     return HttpResponse(template.render(None, request))
     
 
@@ -77,7 +77,7 @@ def ajouter (request):
     if request.method == 'POST' \
        and len(video)>0 \
        and len(nom)>0 \
-       and User.objects.filter(username=request.user).exists():          
+       and User.objects.filter(username=request.user).exists():
         Tutoriel.objects.create(createur=request.user,
                                 description=description,
                                 video=video,
