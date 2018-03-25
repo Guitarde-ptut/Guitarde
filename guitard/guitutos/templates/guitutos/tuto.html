@@ -20,7 +20,7 @@
 <form method="post" action="#">
   Commenter :
   {% csrf_token %}
-  <textarea rows="4" cols="50" name="commentaire"> </textarea>
+  {{ form }}
   <button type="submit">Envoyer</button>
 </form>
 {% else %}

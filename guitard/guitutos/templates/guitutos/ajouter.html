@@ -10,15 +10,10 @@
   
 {% if request.user.is_authenticated %}
 
-<form method="post" action="#">
-  {% csrf_token %}
-  Nom
-  <input type="text" name="nom"/>
-  URL youtube de la vidéo
-  <input type="url" name="video"/>
-  Description
-  <textarea rows="4" cols="50" name="description"></textarea>
-  <button type="submit">Envoyer</button>
+<form action="#" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
 </form>
 
 {% else %}
